@@ -13,6 +13,7 @@ class CoolAlertContainer extends StatelessWidget {
     Key key,
     this.options,
   }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final _header = _buildHeader(context);
@@ -21,6 +22,9 @@ class CoolAlertContainer extends StatelessWidget {
     final _buttons = _buildButtons();
 
     final _content = Container(
+      decoration: BoxDecoration(
+        color: options.contentBgColor ?? Colors.white,
+      ),
       padding: EdgeInsets.all(20.0),
       child: Column(
         children: [

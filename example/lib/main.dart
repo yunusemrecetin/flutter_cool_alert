@@ -81,13 +81,12 @@ class _MyHomePageState extends State<MyHomePage> {
     final confirmAlert = _buildButton(
       onTap: () {
         CoolAlert.show(
-          context: context,
-          type: CoolAlertType.confirm,
-          text: "Do you want to logout",
-          confirmBtnText: "Yes",
-          cancelBtnText: "No",
-          confirmBtnColor: Colors.green
-        );
+            context: context,
+            type: CoolAlertType.confirm,
+            text: "Do you want to logout",
+            confirmBtnText: "Yes",
+            cancelBtnText: "No",
+            confirmBtnColor: Colors.green);
       },
       text: "Confirm",
       color: Colors.lightGreen,

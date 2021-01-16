@@ -20,6 +20,10 @@ class CoolAlertOptions {
   String flareAsset;
   String flareAnimationName;
   String lottieAsset;
+  List<Color> confirmGradientColors;
+  List<Color> cancelGradientColors;
+  Color contentBgColor;
+  Color contentColor;
 
   CoolAlertOptions({
     this.title,
@@ -40,5 +44,9 @@ class CoolAlertOptions {
     this.flareAsset,
     this.flareAnimationName,
     this.lottieAsset,
+    this.confirmGradientColors,
+    this.cancelGradientColors,
+    this.contentBgColor,
+    this.contentColor,
   });
 }

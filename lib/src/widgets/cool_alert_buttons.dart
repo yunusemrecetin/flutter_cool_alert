@@ -75,7 +75,34 @@ class CoolAlertButtons extends StatelessWidget {
       style: _defaultTextStyle(isOkayBtn),
     );
 
-    final okayBtn = MaterialButton(
+    final okayBtn = GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: EdgeInsets.only(
+          left: 25.0,
+          top: 5.0,
+          right: 25.0,
+          bottom: 5.0,
+        ),
+        decoration: BoxDecoration(
+          color: (options.confirmGradientColors == null)
+              ? options.confirmBtnColor ?? Theme.of(context).primaryColor
+              : null,
+          borderRadius: BorderRadius.circular(30.0),
+          gradient: (options.confirmGradientColors != null)
+              ? LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: options.confirmGradientColors,
+                )
+              : null,
+        ),
+        child: Center(
+          child: _btnText,
+        ),
+      ),
+    );
+    /*MaterialButton(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(30.0),
       ),
@@ -86,11 +113,32 @@ class CoolAlertButtons extends StatelessWidget {
           child: _btnText,
         ),
       ),
-    );
+    );*/
 
     final cancelBtn = GestureDetector(
       onTap: onTap,
       child: Container(
+        padding: (options.cancelGradientColors != null)
+            ? EdgeInsets.only(
+                left: 25.0,
+                top: 5.0,
+                right: 25.0,
+                bottom: 5.0,
+              )
+            : null,
+        decoration: BoxDecoration(
+          color: (options.cancelGradientColors != null)
+              ? options.cancelGradientColors
+              : Colors.transparent,
+          borderRadius: BorderRadius.circular(30.0),
+          gradient: (options.cancelGradientColors != null)
+              ? LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: options.cancelGradientColors,
+                )
+              : null,
+        ),
         child: Center(
           child: _btnText,
         ),

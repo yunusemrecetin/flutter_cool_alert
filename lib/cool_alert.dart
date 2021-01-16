@@ -42,6 +42,10 @@ class CoolAlert {
     String flareAsset,
     String flareAnimationName = "play",
     String lottieAsset,
+    List<Color> confirmGradientColors,
+    List<Color> cancelGradientColors,
+    Color contentBgColor,
+    Color contentColor,
   }) {
     CoolAlertOptions options = new CoolAlertOptions(
       title: title,
@@ -62,6 +66,10 @@ class CoolAlert {
       flareAsset: flareAsset,
       flareAnimationName: flareAnimationName,
       lottieAsset: lottieAsset,
+      confirmGradientColors: confirmGradientColors,
+      cancelGradientColors: cancelGradientColors,
+      contentBgColor: contentBgColor,
+      contentColor: contentColor,
     );
 
     Widget child = AlertDialog(
