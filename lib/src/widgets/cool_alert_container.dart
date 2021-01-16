@@ -121,7 +121,9 @@ class CoolAlertContainer extends StatelessWidget {
       String title = options.title == null ? _whatTitle() : options.title;
       return Text(
         title,
-        style: Theme.of(context).textTheme.headline6,
+        style: Theme.of(context).textTheme.headline6.copyWith(
+              color: options.contentColor ?? Colors.black,
+            ),
       );
     }
   }
