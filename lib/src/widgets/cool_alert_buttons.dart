@@ -152,7 +152,6 @@ class CoolAlertButtons extends StatelessWidget {
     final textStyle = TextStyle(
       color: isOkayBtn ? Colors.white : Colors.grey,
       fontWeight: FontWeight.w600,
-      fontSize: 18.0,
     );
 
     if (isOkayBtn) {
