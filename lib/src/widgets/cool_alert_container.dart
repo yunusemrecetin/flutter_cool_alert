@@ -122,6 +122,7 @@ class CoolAlertContainer extends StatelessWidget {
       return Text(
         title,
         style: Theme.of(context).textTheme.headline6.copyWith(
+              fontSize: 14.0,
               color: options.contentColor ?? Colors.black,
             ),
       );
@@ -142,6 +143,7 @@ class CoolAlertContainer extends StatelessWidget {
         text ?? "",
         textAlign: TextAlign.center,
         style: TextStyle(
+          fontSize: 12.0,
           color: options.contentColor ?? Colors.black,
         ),
       );
